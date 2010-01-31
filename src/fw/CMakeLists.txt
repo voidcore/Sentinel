@@ -1,0 +1,2 @@
+include_directories (${Sentinel_SOURCE_DIR}/include/) 
+add_library(fw fw_core.c fw_math_base.c fw_vec3.c fw_vec3f.c fw_vec3_array.c fw_vec3f_array.c fw_mesh.c fw_random.c fw_gauss.c fw_glutil.c fw_hash.c)
