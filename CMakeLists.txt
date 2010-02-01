@@ -1,5 +1,6 @@
 ##############################################################################
 # Basic version setup
+# added comments
 set(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS TRUE)
 
 IF(WIN32)
