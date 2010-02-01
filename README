@@ -1,0 +1,65 @@
+README
+======
+ 
+This project is a small set of helper functions for programming visualization software. I made this after getting fed with all large c++ frameworks that basically only wrapped other libs. 
+
+
+A programming manifest
+----------------------
+
+0. Code is written in C99, but basically mostly c89
+1. Specific instead of generic
+2. Don't preempt needs, write when needed
+3. Use prefix but don't invent own universe
+4. "Objects" live on heap, stack only for very small simple data
+5. vecmath and shape definitions can be on stack
+6. Don't reinvent OOP
+7. Least suprise
+
+
+Object Oriented Structures
+--------------------------
+
+Example:
+
+typedef struct _Image* {
+	uint32	num_pixels;
+	uint32 	width;
+	uint32  height;
+	float*  pixels;	
+} Image;
+
+// Make, Create, Init, Alloc
+// Create = a whole useable object is created
+// Alloc = the structure is allocated
+// Init = the initiated stuct is assigned values
+// Make = same as create
+// I think create is most obvious
+// alloc could be good to have
+
+
+
+Image* image_alloc()
+{
+	Image* img = malloc(sizeof(Image));
+	return img;
+}
+
+void image_init(Image* img) 
+{
+	img->num_pixels = 0;
+	img->width = 0;
+	img->height = 0;
+	img->pixels = NULL;
+}
+
+Image* image_create(uint32 w, uint32 h)
+{
+	// Allocate and init
+	Image* img = image_alloc();
+	image_init(img);
+	
+	// setup
+	
+}
+
