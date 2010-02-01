@@ -1,6 +1,6 @@
 #include <fw/fw_hash.h>
 
-fw_uint fw_hash_func(fw_char* str)
+fw_uint fw_hash_func(const fw_char* str)
 {
 	fw_uint v=0;
 	while ((*str)!= '\0')
@@ -22,7 +22,7 @@ fw_hash* fw_hash_create()
 	return h;
 }
 
-void fw_hash_insert(fw_hash* h, fw_char* key, void* ptr)
+void fw_hash_insert(fw_hash* h, const fw_char* key, void* ptr)
 {
 	fw_uint k = fw_hash_func(key);
 	if (h->table[k] != NULL)
@@ -38,7 +38,7 @@ void fw_hash_insert(fw_hash* h, fw_char* key, void* ptr)
 	
 }
 
-void* fw_hash_find(fw_hash*h, fw_char* key)
+void* fw_hash_find(fw_hash*h, const fw_char* key)
 {
 	return h->table[fw_hash_func(key)];
 }

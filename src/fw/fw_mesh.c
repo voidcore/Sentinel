@@ -44,14 +44,31 @@ void fw_arrays_to_interlaced(
 //------------------------------------------------------------------------------
 fw_mesh* fw_mesh_create()
 {
+	fw_mesh* mesh = malloc(sizeof(fw_mesh));
+	
+	mesh->vertices = NULL;
+	mesh->normals = NULL;
+	mesh->tangents = NULL;
+	mesh->texCoords = NULL;
+	mesh->fat_vertices = NULL;
+	mesh->indices = NULL;
+	
+	return mesh;
 }
 //------------------------------------------------------------------------------
 fw_mesh* fw_mesh_create_box()
 {
+	fw_mesh* mesh = fw_mesh_create();
+		
+	return mesh;
+	
 }
 //------------------------------------------------------------------------------
 void fw_mesh_destroy(fw_mesh* mesh)
 {
+	// dealloc contained data
+	
+	// dealloc self
 }
 //------------------------------------------------------------------------------
 void fw_mesh_print(fw_mesh* mesh)

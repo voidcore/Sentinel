@@ -18,6 +18,8 @@ TARGET_LINK_LIBRARIES(test_hash fw)
 ADD_EXECUTABLE(test_opencl test_opencl.c)
 TARGET_LINK_LIBRARIES(test_opencl fw "-framework OpenCL")
 
+ADD_EXECUTABLE(test_renderer_interface test_renderer_interface.c)
+TARGET_LINK_LIBRARIES(test_renderer_interface fw )
 
 SET(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR} )
 add_library(dlcode SHARED dlcode.c)

@@ -10,8 +10,8 @@ typedef struct _fw_hash
 }fw_hash;
 
 fw_hash* fw_hash_create();
-void fw_hash_insert(fw_hash* h, fw_char* key, void* ptr);
-void* fw_hash_find(fw_hash*h, fw_char* key);
+void fw_hash_insert(fw_hash* h, const fw_char* key, void* ptr);
+void* fw_hash_find(fw_hash*h, const fw_char* key);
 
 
 //------------------------------------------------------------------------------

@@ -35,6 +35,7 @@ typedef enum _fw_notification_level {
 	FW_NOTIFICATION_INFO = 1, 
 	FW_NOTIFICATION_DEBUG = 2,
 } fw_notification_level;
+void fw_set_notification_level(fw_notification_level lvl);
 void fw_info_printf(const char* format, ...);
 void fw_debug_printf(const char* format, ...);
 #ifdef FW_DEBUG

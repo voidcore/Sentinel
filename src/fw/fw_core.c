@@ -3,6 +3,11 @@
 fw_notification_level s_notification_level = FW_NOTIFICATION_SILENT; 
 int s_is_initialized = 0;
 
+void fw_set_notification_level(fw_notification_level lvl)
+{
+	s_notification_level = lvl;
+}
+
 fw_notification_level fw_get_notification_level()
 {	
 	fw_notification_level n = FW_NOTIFICATION_SILENT;
