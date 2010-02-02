@@ -58,8 +58,10 @@ void mesh_db_print(const MeshDB* mdb)
 	printf("MeshDB: %s\n", mdb->name);
 	int i=0;
 
+		
 	for (;i<mdb->current;i++) {
-		printf("Mesh #%d __info_here__\n", i); 		
+		printf("Mesh #%d __info_here__\n", i); 	
+		
 	}
 }
 
@@ -81,7 +83,7 @@ void setup()
 	mesh_db_add(g_meshes, mesh, "box 0");
 	
 	fw_mesh* mesh2 = fw_mesh_create_box(3.0);
-	mesh_db_add(g_meshes, mesh2, "box 1");
+	mesh_db_add(g_meshes, mesh2, "box 0");
  	
     //g_renderer = deferred_renderer_create("Deferred renderer 0");
 	
@@ -89,6 +91,7 @@ void setup()
 	
 }
 
+#pragma mark main
 
 int main (int argc, char const *argv[])
 {
